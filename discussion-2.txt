@@ -1,0 +1,78 @@
+1. Which the preference single or double quotes for PHP developers and why?
+
+
+The selection between single and double quotes in PHP is typically a matter of personal or team preference.But
+When working with strings in PHP, it’s best to use single quotes unless you need variable parsing or escape sequences which are supported by double quotes.
+ Anything in double quotes is parsed by PHP, while anything inside single quotes is not. Using double quotes will actually output and render PHP variables,
+ whereas a single quote will only print out the string without rendering PHP. Single quotes are faster than double quotes because PHP will interpret more escape sequences for special characters in double quotes. 
+However, using double quotes will be slightly slower than using the single quote
+
+2. If you forget the semicolon in the end statement of PHP code, what will PHP 
+processor display for your code, try this by writing a small program in PHP?
+
+If I forget to include the semicolon at the end of a statement in PHP, I will likely encounter a syntax error. 
+The PHP interpreter expects statements to be terminated with a semicolon, 
+and the absence of it leads to a parsing error.
+
+<?php
+    $message = "Hello, World!"  // Missing semicolon here
+
+    echo $message;
+?>
+
+Parse error: syntax error, unexpected 'echo' (T_ECHO) in your_file.php on line X
+
+
+3.Write a script to include a web page called page1 in another web page called 
+page2 use include and require, explain the deference between them and 
+discuss what is the useful from using the include files?.
+
+
+<!-- page1.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+</head>
+<body>
+    <h1>This is Page 1</h1>
+    <p>Welcome to Page 1 content.</p>
+</body>
+</html>
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+<!-- page2.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+</head>
+<body>
+    <h1>This is Page 2</h1>
+    
+    <?php
+        // Using include
+        include 'page1.php';
+    
+        // Using require
+        require 'page1.php';
+    ?>
+
+    <p>Content after including Page 1.</p>
+</body>
+</html>
+,..,,,,,,,,,,,,,
+
+
+include:
+
+If the file specified in include is not found, a warning is issued, but the script continues execution.
+If there are multiple include statements and a file is not found in one of them, the script will continue to include the remaining files.
+require:
+
+If the file specified in require is not found, a fatal error is issued, and the script execution stops.
+If there are multiple require statements and a file is not found in one of them, the script will halt at the first instance of require that cannot be fulfilled.
