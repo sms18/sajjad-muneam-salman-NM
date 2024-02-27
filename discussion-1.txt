@@ -1,0 +1,26 @@
+1. After installing XAMPP application and if you need to save your 
+PHP files on your PC, in what a place can you save it and in what 
+extension for these files?
+ANSWER/
+After installing XAMPP, you can save your PHP files in the "htdocs" directory within the XAMPP installation directory.
+
+2.htdocs is acronyms for what?
+ANSWER/
+it acronyms for "HyperText Documents." 
+
+3.Suppose your PC is running with Windows operating system, can 
+you install MAMP package on it? Explain your answer.
+ANSWER/
+we can't install MAMP for Windows because its use for macos
+
+4.Give me some examples about some web sites that are built with 
+PHP
+ANSWER/
+Facebook,WordPress,Mailchimp,Yahoo,Wikipedia
+
+5.As you remember, JavaScript is a popular client-side programming 
+language and it has the ability to change the content and style of a 
+web page dynamically. One question you may be asking is, “Why 
+do we need a server-side programming language, too?”
+ANSWER/
+While JavaScript handles client-side content and style changes, server-side languages process data, execute logic, access resources, optimize for search engines, ensure cross-browser compatibility, enhance security, and manage sessions, both working together to create robust web applications.
